@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const settings = require("../settings.json");
+const { db } = require("../settings.json");
 
 let _dbContext = null;
 
@@ -13,7 +13,7 @@ dbContext = () => {
     return _dbContext;
 };
 
-const sequelize = new Sequelize(settings.dbConnectionString);
+const sequelize = new Sequelize(`postgres://${db.username}:${db.password}@${db.host}:${db.port}/${db.database}?sslmode=require`);
 
 sequelize
     .authenticate()

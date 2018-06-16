@@ -1,4 +1,11 @@
 {
     "port": 80,
-    "dbConnectionString": "postgres://avnadmin:piqd5af1yl0ysde0@marketing-vladdekh-1d26.aivencloud.com:19840/defaultdb?sslmode=require"
+    "db": {
+        "username": "avnadmin",
+        "password": "piqd5af1yl0ysde0",
+        "host": "marketing-vladdekh-1d26.aivencloud.com",
+        "port": 19840,
+        "database": "defaultdb",
+        "useSsl": true
+    }
 }

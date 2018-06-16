@@ -7,4 +7,4 @@ app.use("/api", router);
 
 console.log("Preparing to start marketing service...");
 
-app.listen(PORT, () => console.log(`Server is started on ${settings.port} port: \u2713`));
+app.listen(settings.port, () => console.log(`Server is started on ${settings.port} port: \u2713`));
