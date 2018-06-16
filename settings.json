@@ -1,0 +1,4 @@
+{
+    "port": 80,
+    "dbConnectionString": "postgres://avnadmin:piqd5af1yl0ysde0@marketing-vladdekh-1d26.aivencloud.com:19840/defaultdb?sslmode=require"
+}
