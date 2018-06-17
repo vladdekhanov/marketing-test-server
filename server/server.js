@@ -1,9 +1,11 @@
 const express = require("express");
 const router = require("./router");
 const settings = require("../settings.json");
+const { initDb } = require("../db/db");
 const app = express();
 
 app.use("/api", router);
+initDb();
 
 console.log("Preparing to start marketing service...");
 

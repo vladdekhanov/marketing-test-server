@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { db } = require("../settings.json");
+const { db } = require("../../settings.json");
 
 const configs = {
     development: {
@@ -21,23 +21,16 @@ const configs = {
 };
 
 const sslOptions = {
-    dialectOptions: {
-        ssl: {
-            ca: fs.readFileSync(__dirname + "/ca.crt")
-        }
+    ssl: {
+        ca: fs.readFileSync(__dirname + "/ca.crt")
     }
 };
 
 if (db.useSsl) {
-    configs.development = {
-        ...configs.development,
-        ...sslOptions
-    };
-
-    configs.production = {
-        ...configs.production,
-        ...sslOptions
-    };
+    configs.development.ssl = true;
+    configs.development.dialectOptions = sslOptions;
+    configs.production.ssl = true;
+    configs.production.dialectOptions = sslOptions;
 }
 
 module.exports = configs;

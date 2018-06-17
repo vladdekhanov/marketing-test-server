@@ -1,5 +1,5 @@
 {
-    "port": 80,
+    "port": 5050,
     "db": {
         "username": "avnadmin",
         "password": "piqd5af1yl0ysde0",
